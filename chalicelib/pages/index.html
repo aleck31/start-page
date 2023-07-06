@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start {% block title %}{% endblock %}</title>
+  <!-- CSS styles for this template -->
+  <link rel="stylesheet" href="css/main">
+  <link rel="stylesheet" href="css/lampadario">
+  <style>
+    .important .rcsp_1 span{ background:url("{{ icon1 }}") no-repeat bottom center;}
+    .important .rcsp_2 span{ background:url("{{ icon2 }}") no-repeat bottom center;}
+    .important .rcsp_3 span{ background:url("{{ icon3 }}") no-repeat bottom center;}
+    .important .rcsp_4 span{ background:url("{{ icon4 }}") no-repeat bottom center;}
+    .important .rcsp_5 span{ background:url("{{ icon5 }}") no-repeat bottom center;}
+    /* hover background */
+    .important .rcsp_1 span:hover{ background:url("{{ icon1 }}") no-repeat top center;}
+    .important .rcsp_2 span:hover{ background:url("{{ icon2 }}") no-repeat top center;}
+    .important .rcsp_3 span:hover{ background:url("{{ icon3 }}") no-repeat top center;}
+    .important .rcsp_4 span:hover{ background:url("{{ icon4 }}") no-repeat top center;}
+    .important .rcsp_5 span:hover{ background:url("{{ icon5 }}") no-repeat top center;}
+    /* float background */
+    .icon_top .i_left{ float:left; background:url("{{ icon_left }}") 0 center no-repeat;}
+    .icon_top .i_right{ float:right; background:url("{{ icon_right }}") 0 center no-repeat;}
+    .icon_top .i_left1{ float:left; background:url("{{ icon_left1 }}") 0 center no-repeat;}
+    .icon_top .i_right1{ float:right; background:url("{{ icon_right1 }}") 0 center no-repeat;}
+  </style>
+  {% endblock %} 
+</head>
+
+<body>
+    {% block content %}
+    <div id="lampadario">
+        <input type="radio" name="switch" value="on" />
+        <input type="radio" name="switch" value="off" checked="checked" />
+        <label for="switch"></label>
+        <div id="filo"></div>
+        <div id="lampadina">
+            <div id="sorpresa">
+                <div class="navlist">		
+                    <ul class="important cl">
+                        <li class="rcsp_1">
+                            <a href="{{ links.link1.url }}"><span></span></a>
+                            <p>{{ links.link1.name }}</p>
+                            <strong style="display:none"><i></i></strong>
+                        </li>
+                        <li class="rcsp_2">
+                            <a href="{{ links.link2.url }}"><span></span></a>
+                            <p>{{ links.link2.name }}</p>
+                            <strong style="display:none"><i></i></strong>
+                        </li>
+                        <li class="rcsp_3">
+                            <a href="{{ links.link3.url }}"><span></span></a>
+                            <p>{{ links.link3.name }}</p>
+                            <strong style="display:none"><i></i></strong>
+                        </li>
+                        <li class="rcsp_4">
+                            <a href="{{ links.link4.url }}"><span></span></a>
+                            <p>{{ links.link4.name }}</p>
+                            <strong style="display:none"><i></i></strong>
+                        </li>
+                        <li class="rcsp_5">
+                            <a href="{{ links.link5.url }}"><span></span></a>
+                            <p>{{ links.link5.name }}</p>
+                            <strong style="display:none"><i></i></strong>
+                        </li>
+                    </ul>
+                </div>
+                <div class="title">
+                    <p>Start from there :)</p>
+                </div>
+                <div class="shadow">
+                    <p>Start from there :)</p>
+                </div>  
+            </div>
+        </div>
+        <div class="sign">
+        <p>by iX.</p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
