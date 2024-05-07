@@ -52,5 +52,5 @@ venv.bak/
 .chalice/deployments/
 .chalice/deployed/
 .chalice/venv/
-.chalice/
+.chalice/config.json
 

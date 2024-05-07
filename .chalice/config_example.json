@@ -1,0 +1,23 @@
+{
+    "version": "0.6",
+    "app_name": "start-page",
+    "stages": {
+        "dev": {
+            "api_gateway_stage": "dev",
+            "autogen_policy": true,
+            "environment_variables": {              
+                "ENV_LOG_LEVEL": "Debug",
+                "SECRET_NAME": "your_secret_name"  
+            }
+        },
+        "prod": {
+            "api_gateway_stage": "prod",
+            "autogen_policy": true,
+            "environment_variables": {              
+                "ENV_LOG_LEVEL": "Warning",
+                "SECRET_NAME": "your_secret_name"  
+            }  
+        }
+
+    }
+}
